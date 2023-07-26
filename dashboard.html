@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - Arda Ganz</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  
+  <link href="assets/css/styleArda.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Icon CSS fas fa -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" type="text/css" media="all" />
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">  	
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        	
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt" id="fullscreenButton"></i>
+          </a>
+        </li><!-- End FullScreenArdaCustom Icon-->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Arda Ganz</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li>
+            <a class="dropdown-item d-flex align-items-center" href="/404.html">
+              <i class="bi bi-house-door"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="/404.html">
+              <i class="bi bi-person"></i>
+              <span>Login</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="/404.html">
+              <i class="bi bi-person-add"></i>
+              <span>Register?</span>
+            </a>
+          </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+    	
+    <li class="nav-heading">Pages</li>
+    
+      <li class="nav-item">
+        <a class="nav-link " href="/">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-globe"></i><span>Project</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="https://replit.com/@ArdaStore">
+              <i class="bi bi-circle"></i><span>Replit</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/bucindreams">
+              <i class="bi bi-circle"></i><span>Github</span>
+            </a>
+          </li>
+          <li>
+            <a href="/404.html">
+              <i class="bi bi-circle"></i><span>Template</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+      	
+      <li class="nav-heading">FEATURE</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="https://infome.ardastore.repl.co" title="https://infome.ardastore.repl.co/"><!-- https://bit.ly/BioArda -->
+              <i class="bi bi-circle"></i><span>Portofolio #1</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://infome2.ardastore.repl.co/">
+              <i class="bi bi-circle"></i><span>Portofolio #2</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://infome3.ardastore.repl.co" title="https://aboutme.ardastore.repl.co/"><!-- https://bit.ly/AboutArda -->
+              <i class="bi bi-circle"></i><span>Portofolio #3</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://deskapp.ardastore.repl.co/">
+              <i class="bi bi-circle"></i><span>Portofolio #4</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+      	
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tools-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-tools"></i><span>Tools</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tools-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        	<li>
+            <a href="https://ardaganz.blogspot.com/p/yt-downloader.html">
+              <i class="bi bi-circle"></i><span>YouTube</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube-generator.ardastore.repl.co">
+              <i class="bi bi-globe2"></i><span>YouTube</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://ardaganz.blogspot.com/p/qr-qode-generator.html">
+              <i class="bi bi-circle"></i><span>Qr Qode</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://porn-hub-generator.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Porn Hub</span>
+            </a>
+          </li>
+          <li>
+          <li>
+            <a href="https://blackpink-generator.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Black Pink</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://ktp-maker-online.ardastore.repl.co/">
+              <i class="bi bi-circle"></i><span>KTP Maker</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bot-nulis-online.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Mager Nulis</span>
+            </a>
+          </li>
+          <li>
+            <a href="rgb-generate.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Rgb Generator</span>
+            </a>
+          </li>
+          <li>
+            <a href="gradient-generator.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Gradient Generator</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://prediksi-jenis-kelamain-berdasarkan-nama.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Prediksi Jenis Kelamin</span>
+            </a>
+          </li>
+          <li>
+            <a href="qr-code-color-generator.ardastore.repl.co">
+              <i class="bi bi-circle"></i><span>Qr Qode Color Generator</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tools Nav -->
+
+      <li class="nav-heading">Contact</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/404.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/404.html">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <!-- Clock Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card clock-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Clock <span>| Today</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-clock"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 id="browser_info">000</h6>
+                      <span class="text-muted small pt-2 ps-1 xzyzy" id="browser_sholat">waktu</span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div><!-- End Clock Card -->
+
+            <!-- Date Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card date-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Date <span id="ThisDay">| This Month</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bx bxs-calendar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 id="clockstyle4">00:00</h6>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Date Card -->
+
+
+            <!-- Battery Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card battery-card">
+              
+                <div class="card-body">
+                  <h5 class="card-title">Battery <span>| Info</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-battery-full"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 id="battery-level">99%</h6>
+                      <span class="text-muted small pt-2 ps-1" id="charging-status">charging</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Battery Card -->
+            	
+            <!-- Visitor Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card visitor-card">
+              
+                <div class="card-body">
+                  <h5 class="card-title">Visitors <span>| View</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-eye"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 id="totalView">17.43k</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Visitor Card -->
+            	
+            
+            
+            
+            <div class="col-xxl-4 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Project Arda Ganz</h5>
+              
+              <!-- Accordion without outline borders -->
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <!-- Accordion #3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <i class="bi bi-code-slash me-1 text-danger"></i>
+                      Portofolio
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <!-- ISI POST -->
+                  </div>
+                </div>                
+                <!-- Accordion #1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <i class="bi bi-tools me-1 text-danger"></i>
+                      Script Bucin
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <!-- ISI POST -->
+                    <div id="ScriptBucinByArdaGanz"></div>
+                        <!-- Medsos -->
+                        <div class="medsos">   
+                        <a class="youtube" title="Youtube" href="LinkSosmedNya" rel="nofollow noopener" target="_blank"><svg viewbox="0 0 24 24"><path d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z"> </path></svg></a>
+                        <a class="instagram" title="Instagram" href="LinkSosmedNya" rel="nofollow noopener" target="_blank"><svg viewbox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg></a>
+                        <a class="telegram" title="Telegram" href="LinkSosmedNya" rel="nofollow noopener" target="_blank"><svg viewBox='0 0 64 64'><path d='M56.4,8.2l-51.2,20c-1.7,0.6-1.6,3,0.1,3.5l9.7,2.9c2.1,0.6,3.8,2.2,4.4,4.3l3.8,12.1c0.5,1.6,2.5,2.1,3.7,0.9 l5.2-5.3c0.9-0.9,2.2-1,3.2-0.3l11.5,8.4c1.6,1.2,3.9,0.3,4.3-1.7l8.7-41.8C60.4,9.1,58.4,7.4,56.4,8.2z M50,17.4L29.4,35.6 c-1.1,1-1.9,2.4-2,3.9c-0.2,1.5-2.3,1.7-2.8,0.3l-0.9-3c-0.7-2.2,0.2-4.5,2.1-5.7l23.5-14.6C49.9,16.1,50.5,16.9,50,17.4z'/></svg></a>
+                        <a class="whatsapp" title="WhatsApp" href="LinkSosmedNya" rel="nofollow noopener" target="_blank"><svg viewbox="0 0 24 24"><path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path></svg></a>
+                        <a class="facebook" title="Facebook" href="LinkSosmedNya" rel="nofollow noopener" target="_blank"><svg viewBox='0 0 64 64'><path d='M20.1,36h3.4c0.3,0,0.6,0.3,0.6,0.6V58c0,1.1,0.9,2,2,2h7.8c1.1,0,2-0.9,2-2V36.6c0-0.3,0.3-0.6,0.6-0.6h5.6 c1,0,1.9-0.7,2-1.7l1.3-7.8c0.2-1.2-0.8-2.4-2-2.4h-6.6c-0.5,0-0.9-0.4-0.9-0.9v-5c0-1.3,0.7-2,2-2h5.9c1.1,0,2-0.9,2-2V6.2 c0-1.1-0.9-2-2-2h-7.1c-13,0-12.7,10.5-12.7,12v7.3c0,0.3-0.3,0.6-0.6,0.6h-3.4c-1.1,0-2,0.9-2,2v7.8C18.1,35.1,19,36,20.1,36z'/></svg></a>
+                        <a class="tiktok" title="Tiktok" href="LinkSosmedNya" rel="nofollow noopener" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs><g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" ><path d="M 36.203 35.438 v -3.51 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -15.047 0 -27.289 12.244 -27.289 27.291 c 0 9.23 4.613 17.401 11.65 22.342 c -4.712 -5.039 -7.332 -11.681 -7.328 -18.58 C 9.559 47.88 21.453 35.784 36.203 35.438" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /><path d="M 36.847 75.175 c 6.714 0 12.19 -5.341 12.44 -11.997 l 0.023 -59.417 h 10.855 c -0.232 -1.241 -0.349 -2.5 -0.35 -3.762 H 44.989 l -0.025 59.419 c -0.247 6.654 -5.726 11.993 -12.438 11.993 c -2.015 0.001 -4 -0.49 -5.782 -1.431 C 29.079 73.238 32.839 75.171 36.847 75.175 M 80.441 23.93 v -3.302 c -3.989 0.004 -7.893 -1.157 -11.232 -3.339 c 2.928 3.371 6.869 5.701 11.234 6.641" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /><path d="M 69.209 17.286 c -3.272 -3.744 -5.075 -8.549 -5.073 -13.522 h -3.972 C 61.203 9.318 64.472 14.205 69.209 17.286 M 32.526 46.486 c -6.88 0.008 -12.455 5.583 -12.463 12.463 c 0.004 4.632 2.576 8.88 6.679 11.032 c -1.533 -2.114 -2.358 -4.657 -2.358 -7.268 c 0.007 -6.88 5.582 -12.457 12.463 -12.465 c 1.284 0 2.515 0.212 3.677 0.577 V 35.689 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -0.216 0 -0.429 0.012 -0.643 0.016 v 11.626 C 35.014 46.685 33.774 46.49 32.526 46.486" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,79); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /><path d="M 80.441 23.93 v 11.523 c -7.689 0 -14.81 -2.459 -20.627 -6.633 v 30.13 c 0 15.047 -12.24 27.289 -27.287 27.289 c -5.815 0 -11.207 -1.835 -15.639 -4.947 c 5.151 5.555 12.384 8.711 19.959 8.709 c 15.047 0 27.289 -12.242 27.289 -27.287 v -30.13 c 6.009 4.321 13.226 6.642 20.627 6.633 V 24.387 c -1.484 0 -2.927 -0.161 -4.323 -0.46" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,79); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /><path d="M 59.813 58.949 v -30.13 c 6.009 4.322 13.226 6.642 20.627 6.633 V 23.93 c -4.364 -0.941 -8.305 -3.272 -11.232 -6.644 c -4.737 -3.081 -8.006 -7.968 -9.045 -13.522 H 49.309 l -0.023 59.417 c -0.249 6.654 -5.726 11.995 -12.44 11.995 c -4.007 -0.004 -7.768 -1.938 -10.102 -5.194 c -4.103 -2.151 -6.676 -6.399 -6.681 -11.032 c 0.008 -6.88 5.583 -12.455 12.463 -12.463 c 1.282 0 2.513 0.21 3.677 0.577 V 35.438 C 21.453 35.784 9.559 47.88 9.559 62.713 c 0 7.173 2.787 13.703 7.328 18.58 c 4.578 3.223 10.041 4.95 15.639 4.945 C 47.574 86.238 59.813 73.996 59.813 58.949" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #fff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g></svg></a>
+                        </div> <!-- Batas Medsos -->
+                  </div>
+                </div>
+                <!-- Accordion #2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <i class="bi bi-info-circle me-1 text-danger"></i>
+                      Your Information
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <!-- ISI POST -->
+                    <br><span><i class="bi bi-globe me-1 text-danger"></i>Country: <a id="country"></a></span>
+                    <br><span><i class="bi bi-code me-1 text-danger"></i>CountryCode: <a id="countryCode"></a></span>
+                    <br><span><i class="ri-globe-line me-1 text-danger"></i>Region: <a id="region"></a></span>
+                    <br><span><i class="ri-globe-fill me-1 text-danger"></i>Region Name: <a id="regionName"></a></span>
+                    <br><span><i class="bi bi-geo-alt me-1 text-danger"></i>City: <a id="city"></a></span>
+                    <br><span><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Latitude: <a id="latitude"></a></span>
+                    <br><span><i class="bi bi-geo-fill me-1 text-danger"></i>Longitude: <a id="longitude"></a></span>
+                    <br><span><i class="bi bi-clock me-1 text-danger"></i>Time Zone: <a id="timezone"></a></span>
+                    <br><span><i class="bi bi-flag-fill me-1 text-danger"></i>Ip-Address: <a id="ip-address"></a></span>                    
+                  </div>
+                </div>
+              </div><!-- End Accordion without outline borders -->
+
+            </div>
+          </div>
+            </div>
+
+
+
+            <div class="col-xxl-4 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Programming Skill</h5>
+
+              <!-- Progress Bars with Backgrounds-->
+              <div class="progress">
+                <div class="progress-bar bg-html" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+              </div>
+              <div class="progress mt-3">
+                <div class="progress-bar bg-css" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+              </div>
+              <div class="progress mt-3">
+                <div class="progress-bar bg-javascript essentials" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+              </div>
+              
+              <br><div style="text-align: center;">
+              <span class="badge rounded-pill bg-html">HTML</span>
+              <span class="badge rounded-pill bg-css">CSS</span>
+              <span class="badge rounded-pill bg-javascript">JAVASCRIPT</span>
+              </div>
+              </div><!-- End Progress Bars with Backgrounds -->
+
+            </div>
+          </div>
+            </div>
+        
+            
+
+          </div>
+        </div><!-- End Left side columns -->
+
+
+
+
+
+          <!--[ ========== START LIST LAPORAN ==========] -->
+          
+          
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+        
+        
+        
+          <!-- Recent Activity -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+
+              <div class="activity">
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">30 menit</div>
+                  <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                  <div class="activity-content">
+                    Menambah validasi formulir menuju <a class="fw-bold text-dark">WhatsApp</a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">56 menit</div>
+                  <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                  <div class="activity-content">
+                    Menambah Informasi ip-api.com
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">4 jam</div>
+                  <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                  <div class="activity-content">
+                    Menambah Widget seperti Script Bucin, Donasi
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">1 day</div>
+                  <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                  <div class="activity-content">
+                    Membuat tampilan pada umumnya seperti<a class="fw-bold text-dark"> Widget</a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">9 Hari</div>
+                  <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                  <div class="activity-content">
+                    Menghapus Style style yang tidak penting 
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">2 minggu</div>
+                  <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
+                  <div class="activity-content">
+                    Mengunduh dan Menginstal ulang Project
+                  </div>
+                </div><!-- End activity item-->
+
+              </div>
+
+            </div>
+          </div><!-- End Recent Activity -->
+          
+          
+          
+          
+          <div class="col-xxl-4 col-md-6">
+          <div class="card">
+                <!--[ Artikel Donasi by ArdaProject #767676 ]-->
+                <input id='wc-check-dnt' type='checkbox'/>
+                <div class='wc-dnt-box shadow'>
+                <label class='wc-dnt-sw' for='wc-check-dnt'><svg class='getar' viewBox='0 0 24 24'><g transform='translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)'><path d='M14,0 C14,0 9.856,7 7,7 C4.145,7 0,0 0,0'></path></g></svg></label>
+                <img alt='Arda Saha' class='wc-dnt-icon lazy' src='https://cdn.trakteer.id/images/mix/trakteer-icon-thumbnail.png'/>
+                <div class='wc-dnt-hidden'>
+                <p class='textSupport'>Support untuk ArdaStore</p>
+                <label class='wc-dnt-trn' for='wc-check-bnk'>
+                <svg class='wc-dnt-svg line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect height='16' rx='2' ry='2' width='22' x='1' y='4'></rect><line x1='1' x2='23' y1='10' y2='10'></line></svg>
+                <span>Donasi via E-wallet</span><svg height='1rem' preserveAspectRatio='xMidYMid meet' style='align-self: center;' viewBox='0 0 24 24' width='1rem' xmlns='http://www.w3.org/2000/svg'><path d='M16.293 9.293L12 13.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z' fill='#767676'></path></svg></label>
+                <input id='wc-check-bnk' type='checkbox'/>
+
+                <a class='wc-dnt-pp' href='https://www.paypal.com/paypalme/yanuarzg' target='_blank'>
+                <svg class='wc-dnt-svg' viewBox="0 0 75.12923 92.611049" fill="#767676" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-204.38894)"><g aria-label="s" style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:166.866745px;line-height:1.25;font-family:and;-inkscape-font-specification:'and Bold';text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle;fill-opacity:1;stroke:none;stroke-width:7.82187843" id="text817"><path d="m39.252914 296.99999q-11.680672.0-21.692676-3.50421-9.8451383-3.67106-15.3517409-9.17767-2.50300117-2.66986-2.16926768-6.0072.50060023-3.5042 3.33733488-5.67347 3.3373349-2.66987 6.5078031-2.16927 3.3373346.33374 5.6734696 2.83674 2.836734 3.17047 9.010804 6.0072 6.340936 2.66987 14.016807 2.66987 9.678271.0 14.684273-3.17047 5.172869-3.17047 5.339736-8.17647.166867-5.006-4.839136-8.67707-4.839135-3.67107-17.854741-6.0072-16.853542-3.33734-24.529412-10.01201-7.5090034-6.67467-7.5090034-16.35294.0-8.5102 5.0060023-14.01681 5.0060021-5.67346 12.8487391-8.34333 7.842737-2.83674 16.352941-2.83674 11.013205.0 19.523409 3.5042 8.510204 3.50421 13.516207 9.67828 2.336134 2.66986 2.169267 5.67347-.166866 2.83673-2.836734 4.83913-2.669868 1.83554-6.340937 1.16807-3.671068-.66747-6.174069-3.0036-4.171669-4.00481-9.010804-5.50661-4.839136-1.5018-11.180072-1.5018-7.342137.0-12.515006 2.503-5.006002 2.50301-5.006002 7.34214.0 3.0036 1.5018 5.5066 1.668668 2.33614 6.340937 4.33854 4.672268 1.83553 13.683073 3.67107 12.515006 2.503 19.690276 6.34093 7.342136 3.83794 10.512605 9.01081 3.170468 5.006 3.170468 11.68067.0 7.67587-4.171669 13.84994-4.004802 6.17407-12.014406 9.84514-7.842737 3.67107-19.690276 3.67107z" style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa Bold';stroke-width:7.82187843" id="path819"/></g></g></svg>
+                <span>Donate via Saweria</span><svg height='1rem' preserveAspectRatio='xMidYMid meet' style='align-self: center;color: dimgray;' viewBox='0 0 24 24' width='1rem' xmlns='http://www.w3.org/2000/svg'><path d='M17.001 20h-11a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4v2h-4v11h11v-4h2v4a2 2 0 0 1-2 2Zm-5.3-6.293l-1.41-1.414L16.584 6h-3.583V4h7v7h-2V7.415l-6.3 6.292Z' fill='#767676'></path></svg></a>
+
+                <a class='wc-rt-mp' href='https://trakteer.id/Ardastore/tip' target='_blank'>
+                <svg class='wc-dnt-svg line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M18 8h1a4 4 0 0 1 0 8h-1'></path><path d='M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z'></path><line x1='6' x2='6' y1='1' y2='4'></line><line x1='10' x2='10' y1='1' y2='4'></line><line x1='14' x2='14' y1='1' y2='4'></line></svg>
+                <span>Donasi via Trakteer</span><svg height='1rem' preserveAspectRatio='xMidYMid meet' style='align-self: center;color: dimgray;' viewBox='0 0 24 24' width='1rem' xmlns='http://www.w3.org/2000/svg'><path d='M17.001 20h-11a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4v2h-4v11h11v-4h2v4a2 2 0 0 1-2 2Zm-5.3-6.293l-1.41-1.414L16.584 6h-3.583V4h7v7h-2V7.415l-6.3 6.292Z' fill='#767676'></path></svg></a>
+                <div class='wc-dnt-rk'>   Dana/Gopay/Ovo -<span class='form-copy px-05' id='code1'>081370126262</span>
+                <svg class='line btn-copy getar cBoxB' height='1rem' id='copy1' onclick='copyC(&#39;copy1&#39;,&#39;code1&#39;)' style='vertical-align: middle;' viewBox='0 0 24 24' width='1rem' xmlns='http://www.w3.org/2000/svg'><g><rect height='16.45385' rx='4' width='16.45385' x='5.54615' y='5.54615'></rect><path d='M171.33311,181.3216v-8.45385a4,4,0,0,1,4-4H183.787' transform='translate(-169.33311 -166.86775)'></path></g></svg>
+                </div>
+                </div>
+                <div class='tNtf' id='toastNotif'></div>
+                <div class='wc-dnt-txt'>DONASI BUAT ARDA </div>
+                </div>
+                <!-- Batas Artikel -->
+            </div>
+            </div>
+            
+           
+
+          
+        </div><!-- End Right side columns -->
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+  	
+  
+  <!-- ======= Script Arda ======= -->
+
+
+  
+
+ 
+  
+  
+ 
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Arda Ganz</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script>
+    // Device Information
+    // Variable
+    const screen = document.getElementById('screen');
+
+    window.setTimeout("getScreen()", 1000);
+    function getScreen() {
+      const screenWidth = window.screen.width;
+      const screenHeight = window.screen.height;
+      const screenOrientation = window.screen.orientation.type;
+      screen.textContent = `Width ${screenWidth}, Height ${screenHeight}, Orientation ${screenOrientation}`;
+    };
+  </script>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- Template Buccin By Arda Ganz -->
+  <script src="assets/js/ScriptBucinByArda.js"></script>
+  <!-- Template Ip Address By Arda Ganz -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="assets/js/YourInformation.js"></script>
+  <!-- Script Jam By Arda Ganz -->
+  <script src="assets/js/scriptArda.js"></script>
+  <!-- Script Full Screen By Arda Ganz -->
+  <script src="assets/js/fullscreen.js"></script>
+</body>
+
+</html>

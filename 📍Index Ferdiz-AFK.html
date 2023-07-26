@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dashboard - base onichan</title>
+  <!-- Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- Favicons -->
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/img/favicon.png" rel="icon">
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="https://bucindreams.github.io/NiceAdmin/assets/css/style.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://ferdiz-afk.github.io/deskapp/vendors/styles/core.css" />
+  <link rel="stylesheet" type="text/css" href="https://ferdiz-afk.github.io/deskapp/vendors/styles/icon-font.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://ferdiz-afk.github.io/deskapp/src/plugins/cropperjs/dist/cropper.css" />
+  <link rel="stylesheet" type="text/css" href="https://ferdiz-afk.github.io/deskapp/vendors/styles/style.css" />
+  <style>
+  	 :root{ --linkB: #28A1F0; --contentB: #f6f9ff; --buttonR: 3px; }
+  /* ToC */ .pS details summary{list-style:none;outline:none} .pS details summary::-webkit-details-marker{display:none} details.sp summary{display:flex;justify-content:space-between;align-items:baseline} details.sp summary::after{content:attr(data-show);padding:4px 10px;background:var(--linkB);color:#fffdfc;font-size:12px;border-radius:var(--buttonR);cursor:pointer} details.sp[open] summary::after{content:attr(data-hide)} details.toc a:hover{text-decoration:underline} details.toc a{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;color:inherit} details.toc ol, details.toc ul{padding:0 20px; list-style-type:decimal} details.toc li ol, details.toc li ul{margin:5px 0 10px; list-style-type:lower-alpha}
+  /* Button Download */  .buttonArda{ display:inline-flex; align-items:center; margin:10px 0; padding:12px 15px; outline:0; border:0; border-radius:3px; box-shadow: 0 0 8px #28A1F0; line-height:20px; color:#fff; background:#28A1F0; font-size:14px; font-family:'Poppins', sans-serif; white-space:nowrap; overflow:hidden; max-width:320px} 
+  /* Icon Download */  .icon{flex-shrink:0;display:inline-flex} .icon::before{content:'';width:18px;height:18px;background-size:18px;background-repeat:no-repeat;background-position:center} .icon::after{content:'';padding:0 3px} .icon.dl::before, .drK .button.ln .icon.dl::before{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fefefe' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><polyline points='8 17 12 21 16 17'/><line x1='12' y1='12' x2='12' y2='21'/><path d='M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29'/></svg>")} .icon.demo::before{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fefefe' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z'/><path d='M10.11 13.6501L13.69 10.0601'/></svg>")} .button.ln .icon.dl::before{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2308102b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><polyline points='8 17 12 21 16 17'/><line x1='12' y1='12' x2='12' y2='21'/><path d='M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29'/></svg>")} /* Lightbox image */ .zmImg.s{position:fixed;top:0;left:0;bottom:0;right:0;width:100%;margin:0;background:rgba(0,0,0,.75); display:flex;align-items:center;justify-content:center;z-index:999; -webkit-backdrop-filter:saturate(180%) blur(15px); backdrop-filter:saturate(180%) blur(15px)} .zmImg.s img{display:block;max-width:92%;max-height:92%;width:auto;margin:auto;border-radius:10px;box-shadow:0 5px 30px 0 rgba(0,0,0,.05)} .zmImg.s img.full{left:auto;right:auto;border-radius:10px;width:auto} .zmImg::after{content:'\2715';line-height:16px;font-size:14px;color:#fffdfc;background:var(--linkB); position:fixed;bottom:-20px;right:-20px; display:flex;align-items:center;justify-content:center;width:45px;height:45px;border-radius:50%; transition:var(--trans-1);opacity:0;visibility:hidden} .zmImg.s::after{bottom:20px;right:20px;opacity:1;visibility:visible;cursor:pointer}a{text-decoration:none;}
+
+/* Box By Arda Ganz */
+.dlBox{max-width:640px;background:transparent;border-radius:10px;padding:12px;margin:1.7em 0; display:flex;align-items:center; font-size:18px;line-height:1.4em} 
+.dlBox .fT{flex-shrink:0;display:flex;align-items:center;justify-content:center; width:90px;height:160px; padding:0px; background:rgba(0,0,0,.1);border-radius:5px} 
+.dlBox .fT::before{content:attr(data-text);opacity:.7} .dlBox .fT img{width:90x;height:160px}
+.dlBox a{flex-shrink:0;margin:0;padding:10px;border-radius:8px;font-size:13px} .dlBox a::after{content:attr(aria-label)} 
+.dlBox .fN{flex-grow:1; width:calc(100% - 200px);padding:0 15px} 
+.dlBox .fN >*{display:block;font-weight:700;} 
+.dlBox .fS{line-height:16px;font-size:14px;font-weight:400;font-family:Garamond, serif;margin-top:10px;opacity:.8} 
+  .dlBox{font-size:18px;font-weight:700}
+  .dlBox .fT img{width:90x;height:160px}
+  .dlBox a{flex-shrink:unset;font-weight:400}
+  .dlBox .fN >*{display:block;} 
+  .dlBox .fS{font-weight:400}
+  .dlBox .fN{flex-grow:1;padding:0 15px}
+  .dlBox .fN .buttonInfo{display:inline-flex;margin-top:30px;position:relative}
+  .dlBox .fN .buttonInfo a{margin-right:10px}
+
+
+
+
+    /* Add your custom animations here */
+    
+    .loading-text {
+      animation: shake 2s infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+      20%, 40%, 60%, 80% { transform: translateX(10px); }
+    }
+  </style>
+</head>
+<body>
+  <!--div class="pre-loader">
+    <div class="pre-loader-box">
+      <div class="loader-logo">
+        <img src="https://i.ibb.co/DtFgv3g/giphy.webp" alt="">
+      </div>
+      <div class="loader-progress" id="progress_div">
+        <div class="bar" id="bar1"></div>
+      </div>
+      <div class="percent" id="percent1">0%</div>
+      <div class="loading-text">Oni-chan Loading...</div>
+    </div>
+  </div-->
+
+  <header id="header" class="header fixed-top d-flex align-items-center" style="width:100%">
+  <div class="d-flex align-items-center justify-content-between">
+    <div class="toggles">
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+  </div>
+  <div class="search-bar">
+    <form class="search-form d-flex align-items-center" method="POST" action="/search">
+      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+      <button type="submit" title="Search">
+        <i class="bi bi-search "></i>
+      </button>
+    </form>
+  </div>
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle" style="margin-right: -15px;">
+          <i class="fa fa-search faa-ring animated faa-slow"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown pe-3">
+        
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <div class="position-relative">
+            <img class="rounded-circle" src="https://i.ibb.co/PZMJ5gK/69329fe8982609f7821af1ed4ea4e205.jpg" alt="">
+            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+          </div>
+        </a>
+        
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="/dashboard">
+              <i class="bi bi-house-door"></i>
+              <span>dashboard</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="/users/login">
+              <i class="bi bi-person"></i>
+              <span>login</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="/users/register">
+              <i class="bi bi-person-add"></i>
+              <span>Register?</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <aside id="sidebar" class="sidebar" style="z-index:122;">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-heading">Pages</li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href=/dashboard>
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#pageschan-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i>
+        <span>Portfolio</span>
+        <i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="pageschan-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="/short-url">
+            <i class="bi bi-circle"></i>
+            <span>Portfolio #1</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="components-tooltips.html">
+            <i class="bi bi-circle"></i>
+            <span>Portfolio #2</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="components-tooltips.html">
+            <i class="bi bi-circle"></i>
+            <span>Portfolio #3</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="components-tooltips.html">
+            <i class="bi bi-circle"></i>
+            <span>Portfolio #4</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i>
+        <span>Components</span>
+        <i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="components-alerts.html">
+            <i class="bi bi-circle"></i>
+            <span>Alerts</span>
+          </a>
+        </li>
+        <li>
+          <a href="components-accordion.html">
+            <i class="bi bi-circle"></i>
+            <span>Accordion</span>
+          </a>
+        </li>
+        <li>
+          <a href="components-badges.html">
+            <i class="bi bi-circle"></i>
+            <span>Badges</span>
+          </a>
+        </li>
+        <li>
+          <a href="components-breadcrumbs.html">
+            <i class="bi bi-circle"></i>
+            <span>Breadcrumbs</span>
+          </a>
+        </li>
+        <li>
+          <a href="components-tooltips.html">
+            <i class="bi bi-circle"></i>
+            <span>Tooltips</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-heading">Feature</li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="users-profile.html">
+        <i class="micon bi bi-arrow-down"></i>
+        <span>download</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="users-profile.html">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-faq.html">
+        <i class="bi bi-question-circle"></i>
+        <span>F.A.Q</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-contact.html">
+        <i class="bi bi-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-register.html">
+        <i class="bi bi-card-list"></i>
+        <span>Register</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-login.html">
+        <i class="bi bi-box-arrow-in-right"></i>
+        <span>Login</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-error-404.html">
+        <i class="bi bi-dash-circle"></i>
+        <span>Error 404</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-blank.html">
+        <i class="bi bi-file-earmark"></i>
+        <span>Blank</span>
+      </a>
+    </li>
+  </ul>
+</aside>
+<script>
+  try {
+    (() => {
+      const f = (q) => document.querySelector(q);
+      document.addEventListener('click', (e) => {
+        e = e.target;
+        if (!e.classList.contains('toggle-sidebar-btn') && f('body').classList.contains('toggle-sidebar') && !e.closest('.sidebar')) f('body').classList.remove('toggle-sidebar');
+        if (!e.closest('.search-bar-toggle') && f('div.search-bar').classList.contains('search-bar-show') && !e.closest('div.search-bar')) f('div.search-bar').classList.remove('search-bar-show');
+      });
+    })();
+  } catch (e) {
+    console.error(e);
+  }
+</script>
+
+  <main id="main" class="main">
+  	
+  
+  
+       
+  	<div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Library</li>
+        </ol>
+      </nav>
+    </div> <!-- End Page Title -->
+    	
+  <section class="section dashboard">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="content-wrapper text-center col-xxl-4 col-xl-12">
+                                  
+                      
+                      
+                      
+                      
+                                  
+
+
+          </div>
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="card-body">
+                <h5 class="card-title">CLOCK</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon alert alert-primary rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-clock"></i>
+                  </div>
+                  <div class="ps-3">
+                    <div class="weight-700 font-24 text-dark" id="browser_info">000</div>
+                    <div class="font-14 text-secondary weight-500" id="browser_sholat">waktu</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="card-body">
+                <h5 class="card-title">Visitors</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon alert alert-info rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-eye"></i>
+                  </div>
+                  <div class="ps-3">
+                    <div class="weight-700 font-24 text-dark">501</div>
+                    <div class="font-14 text-secondary weight-500">visitors</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="card-body">
+                <h5 class="card-title">Total short url</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon alert alert-danger rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bx-code-curly"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>4</h6>
+                    <span class="text-muted small pt-2 ps-1">Short urls</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card">
+              <div class="card-body">
+                <h5 class="card-title">Total fitur</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon alert alert-warning rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-menu-button-wide"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>0</h6>
+                    <span class="text-muted small pt-2 ps-1">Rest api fitur</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card ">
+              <div class="card-body">
+                <h5 class="card-title">battery info</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon alert alert-success rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-battery-full"></i>
+                  </div>
+                  <div class="ps-3">
+                    <div class="weight-700 font-24 text-dark" id="battery-level">%</div>
+                    <div class="font-14 text-secondary weight-500" id="charging-status">charging</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--[ ========== CARD - BODY ==========] -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="card-body">
+                <!-- Details / Show Hide All -->
+                <details class='sp'>
+                	<summary data-show='Show all' data-hide='Hide all'><h5 class="card-title">Script Bucin</h5></summary>
+                <!-- Box By ArdaGanz -->
+                <p><div class='dlBox'>
+            	<span class='fT'>
+            	<img src="https://telegra.ph/file/5052243ca2a11830aae14.jpg"/></span>
+                <div class='fN'>
+            	<span>Judul</span>
+                <span class='fS'>@ardasaha10</span>
+                <div class="buttonInfo">
+                <a class="buttonArda" href="https://bucindreams.github.io/Lah-Gw" target="_blank"><i class="icon dl"></i>Lihat</a>
+                <a class="buttonArda" href="https://Lahgw.ardastore.repl.co" target="_blank"><i class="icon demo"></i>Lihat</a>
+                </div></div></div></p>
+                <!-- Batas Details / Show Hide All -->
+                </details>
+                <!--[ ========== BATAS CARD - BODY ==========] -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-xxl-4 col-xl-12">
+            <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+              <div class="card-body">
+                <strong>Thanks:</strong>
+                <div class="row">
+                  <div class="col-auto">
+                    <ul>
+                      <li>• Allah SWT.</li>
+                      <li>• Parents</li>
+                      <li>• Hadi (my partner)</li>
+                      <li>• railway</li>
+                      <li>• anymhost.id (penyedia domain)</li>
+                      <li>• ExpressJS, Pasport, EJS &amp; MongoDB</li>
+                      <li>• The person who helped share this API</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <script>
+  (function() {
+    let batteryLevel = document.getElementById("battery-level");
+    let chargingStatus = document.getElementById("charging-status");
+
+    navigator.getBattery()
+      .then(battery => {
+        if (battery) {
+          function setStatus() {
+            batteryLevel.innerHTML = Math.round(battery.level * 100) + "%";
+            chargingStatus.innerHTML = battery.charging ? "⚡⚡" : "discharging";
+            console.log("Set status " + batteryLevel.innerHTML + " " + chargingStatus.innerHTML);
+          }
+
+          setStatus();
+          battery.addEventListener("levelchange", setStatus, false);
+          battery.addEventListener("chargingchange", setStatus, false);
+        } else {
+          throw new Error('Battery API not supported on your device/computer');
+        }
+      })
+      .catch(error => {
+        // batterySupported.innerHTML = error.message;
+      });
+  })();
+</script>
+
+  <script type="text/javascript">
+  let text_el = document.querySelector('div#browser_info');
+  let hSalam = document.querySelector('div#browser_sholat');
+  setInterval(() => {
+    const d = new Date();
+    const jam = d.getHours().toString().padStart(2, '0');
+    const menit = d.getMinutes().toString().padStart(2, '0');
+    const detik = d.getSeconds().toString().padStart(2, '0');
+    const ucapan = getGreeting(jam);
+
+    hSalam.innerHTML = ucapan;
+    text_el.innerHTML = `${jam}:${menit}:${detik}`;
+  }, 250);
+
+  function getGreeting(jam) {
+    if (jam >= '04:00' && jam <= '06:00') {
+      return 'Subuh!';
+    } else if (jam >= '06:00' && jam <= '10:00') {
+      return 'Good morning sis, don`t forget to start the day with a cup of coffee ☕ !';
+    } else if (jam >= '10:00' && jam <= '14:00') {
+      return 'Selamat Siang kak!';
+    } else if (jam >= '14:00' && jam <= '17:00') {
+      return 'Selamat Sorre kak!';
+    } else if (jam >= '17:00' && jam <= '17:30') {
+      return 'Petang!';
+    } else if (jam >= '17:30' && jam <= '18:10') {
+      return 'Magrib!';
+    } else {
+      return 'Selamat Malam kak!';
+    }
+  }
+</script>
+
+
+
+
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright 
+      <strong>
+        <span>bootstrap</span>
+      </strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://bootstrap.com/">Bootstrap</a>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/quill/quill.min.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="https://bucindreams.github.io/NiceAdmin/assets/js/main.js"></script>
+
+  <script>
+    // Add your JavaScript code here
+    /*
+    let btn = document.querySelector("toggles");
+    let icon = document.querySelector(".bi-list");
+    if (btn) {
+      btn.onclick = function() {
+        if (icon.classList.contains("bi-list")) {
+          icon.classList.replace("bi-list", "bi-x-lg");
+        } else {
+          icon.classList.replace("bi-x-lg", "bi-list");
+        }
+      }
+    }
+    */
+  </script>
+
+  <script>
+    // Device Information
+    // Variable
+    const screen = document.getElementById('screen');
+
+    window.setTimeout("getScreen()", 1000);
+    function getScreen() {
+      const screenWidth = window.screen.width;
+      const screenHeight = window.screen.height;
+      const screenOrientation = window.screen.orientation.type;
+      screen.textContent = `Width ${screenWidth}, Height ${screenHeight}, Orientation ${screenOrientation}`;
+    };
+  </script>
+
+  
+  
+
+  <script src="https://ferdiz-afk.github.io/deskapp/vendors/scripts/core.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/vendors/scripts/script.min.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/vendors/scripts/process.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/vendors/scripts/layout-settings.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/src/plugins/cropperjs/dist/cropper.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/src/plugins/apexcharts/apexcharts.min.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+  <script src="https://ferdiz-afk.github.io/deskapp/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+</body>
+</html>
